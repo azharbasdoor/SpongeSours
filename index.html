@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Halaman Sponsor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 24px;
+    }
+    h1 {
+      text-align: center;
+      color: #2d2d2d;
+    }
+    .sponsor-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .sponsor-item {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 16px;
+      background: #f9f9f9;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+    .sponsor-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .sponsor-img {
+      max-width: 160px;
+      max-height: 80px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+    .sponsor-name {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #444;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Daftar Sponsor</h1>
+    <div class="sponsor-list" id="sponsorList">
+      <!-- Gambar sponsor akan dimuat di sini -->
+    </div>
+  </div>
+  <script>
+    // Daftar sponsor (bisa diganti sesuai kebutuhan)
+    const sponsors = [
+      {
+        name: "Sponsor 1",
+        img: "https://dummyimage.com/200x80/4A90E2/fff&text=Sponsor+1"
+      },
+      {
+        name: "Sponsor 2",
+        img: "https://dummyimage.com/200x80/E94E77/fff&text=Sponsor+2"
+      },
+      {
+        name: "Sponsor 3",
+        img: "https://dummyimage.com/200x80/39B54A/fff&text=Sponsor+3"
+      }
+    ];
+
+    const sponsorList = document.getElementById('sponsorList');
+    sponsors.forEach(sponsor => {
+      const div = document.createElement('div');
+      div.className = 'sponsor-item';
+      div.innerHTML = `
+        <img class="sponsor-img" src="${sponsor.img}" alt="${sponsor.name}">
+        <div class="sponsor-name">${sponsor.name}</div>
+      `;
+      sponsorList.appendChild(div);
+    });
+  </script>
+</body>
+</html>
