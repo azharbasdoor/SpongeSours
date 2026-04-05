@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Sponsor Page (nS.aB Private Family Media)</title>
   <style>
@@ -15,8 +16,8 @@
       max-width: 800px;
       margin: 40px auto;
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 8px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
       padding: 24px;
     }
     h1 {
@@ -24,31 +25,38 @@
       color: #2d2d2d;
     }
     .sponsor-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: center;
+  
+      text-align: center;
       margin-top: 32px;
+      font-size: 0; 
     }
     .sponsor-item {
+ 
+      display: inline-block;
+      vertical-align: top;
+      margin: 12px;
       border: 1px solid #e0e0e0;
       border-radius: 6px;
       padding: 16px;
       background: #f9f9f9;
       width: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: box-shadow 0.2s;
+      font-size: 16px; 
     }
+
     .sponsor-item:hover {
+      border-color: #ccc; 
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
     .sponsor-img {
       max-width: 160px;
       max-height: 80px;
-      object-fit: contain;
+      width: auto;
+      height: auto;
+
       margin-bottom: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     .sponsor-name {
       font-size: 1.1em;
@@ -62,153 +70,60 @@
   <div class="container">
     <h1>nS.aB Private Family Media, Sponsored By: </h1>
     <div class="sponsor-list" id="sponsorList">
-      <!-- Gambar sponsor akan dimuat di sini -->
-    </div>
+      </div>
   </div>
   <script>
-    // Daftar sponsor (bisa diganti sesuai kebutuhan)
-    const sponsors = [
-      {
-        name: "European Union",
-        img: "eu.png"
-      },
-      {
-        name: "United States of America",
-        img: "usa.png"
-      },
-      {
-        name: "Israel",
-        img: "israel.png"
-      },
-      {
-        name: "Malaysia",
-        img: "malaysia.png"
-      },
-      {
-        name: "Coca Cola Indonesia",
-        img: "cocacola.png"
-      },
-      {
-        name: "Chilla Kiana",
-        img: "chillakiana.jpeg"
-      },
-      {
-        name: "Esa Digital Manggala",
-        img: "cluepay.jpeg"
-      },
-      {
-        name: "GetCourse Indonesia",
-        img: "getcourse.jpeg"
-      },
-      {
-        name: "Carousell Indonesia",
-        img: "carousell.png"
-      },
-      {
-        name: "Ikea Indonesia",
-        img: "ikea.png"
-      },
-      {
-        name: "Indofood CBP Sukses Makmur",
-        img: "indofood.jpeg"
-      },
-      {
-        name: "Jiguang Indonesia",
-        img: "jiguang.png"
-      },
-      {
-        name: "Exabytes Indonesia",
-        img: "exabytes.png"
-      },
-      {
-        name: "Pembiayaan Digital Indonesia",
-        img: "adakami.png"
-      },
-      {
-        name: "Transportasi Jakarta",
-        img: "transjakarta.png"
-      },
-      {
-        name: "Sinarmas",
-        img: "sinarmas.png"
-      },
-      {
-        name: "Games Karya Nusantara",
-        img: "majamojo.png"
-      },
-      {
-        name: "Unilever Indonesia",
-        img: "unilever.png"
-      },
-      {
-        name: "Haidilao Indonesia",
-        img: "haidilao.png"
-      },
-      {
-        name: "Wings Indonesia",
-        img: "wings.png"
-      },
-      {
-        name: "Danone Indonesia",
-        img: "danone.jpeg"
-      },
-      {
-        name: "Mayora Indonesia",
-        img: "mayora.png"
-      },
-      {
-        name: "Erie Suzan",
-        img: "eriesuzan.jpeg"
-      },
-      {
-        name: "Mister & Miss Grand Tourism Indonesia",
-        img: "mmgti.jpeg"
-      },
-      {
-        name: "MVP Pictures",
-        img: "mvp.png"
-      },
-      {
-        name: "Commerce Finance",
-        img: "spaylater.png"
-      },
-      {
-        name: "Lentera Dana Nusantara",
-        img: "spinjam.jpeg"
-      },
-      {
-        name: "Akulaku Finance Indonesia",
-        img: "akulaku.jpeg"
-      },
-      {
-        name: "Mapan Global Reksa",
-        img: "gopaypinjam.png"
-      },
-      {
-        name: "Kalbe Farma",
-        img: "kalbe.jpeg"
-      },
-      {
-        name: "Taman Sari Forest",
-        img: "tamansariforest.jpeg"
-      },
-        {
-        name: "Google Indonesia",
-        img: "google.jpeg"
-      },
-      
+
+    var sponsors = [
+      { name: "European Union", img: "eu.png" },
+      { name: "United States of America", img: "usa.png" },
+      { name: "Israel", img: "israel.png" },
+      { name: "Malaysia", img: "malaysia.png" },
+      { name: "Coca Cola Indonesia", img: "cocacola.png" },
+      { name: "Chilla Kiana", img: "chillakiana.jpeg" },
+      { name: "Esa Digital Manggala", img: "cluepay.jpeg" },
+      { name: "GetCourse Indonesia", img: "getcourse.jpeg" },
+      { name: "Carousell Indonesia", img: "carousell.png" },
+      { name: "Ikea Indonesia", img: "ikea.png" },
+      { name: "Indofood CBP Sukses Makmur", img: "indofood.jpeg" },
+      { name: "Jiguang Indonesia", img: "jiguang.png" },
+      { name: "Exabytes Indonesia", img: "exabytes.png" },
+      { name: "Pembiayaan Digital Indonesia", img: "adakami.png" },
+      { name: "Transportasi Jakarta", img: "transjakarta.png" },
+      { name: "Sinarmas", img: "sinarmas.png" },
+      { name: "Games Karya Nusantara", img: "majamojo.png" },
+      { name: "Unilever Indonesia", img: "unilever.png" },
+      { name: "Haidilao Indonesia", img: "haidilao.png" },
+      { name: "Wings Indonesia", img: "wings.png" },
+      { name: "Danone Indonesia", img: "danone.jpeg" },
+      { name: "Mayora Indonesia", img: "mayora.png" },
+      { name: "Erie Suzan", img: "eriesuzan.jpeg" },
+      { name: "Mister & Miss Grand Tourism Indonesia", img: "mmgti.jpeg" },
+      { name: "MVP Pictures", img: "mvp.png" },
+      { name: "Commerce Finance", img: "spaylater.png" },
+      { name: "Lentera Dana Nusantara", img: "spinjam.jpeg" },
+      { name: "Akulaku Finance Indonesia", img: "akulaku.jpeg" },
+      { name: "Mapan Global Reksa", img: "gopaypinjam.png" },
+      { name: "Kalbe Farma", img: "kalbe.jpeg" },
+      { name: "Taman Sari Forest", img: "tamansariforest.jpeg" },
+      { name: "Google Indonesia", img: "google.jpeg" }
     ];
 
-    const sponsorList = document.getElementById('sponsorList');
-    sponsors.forEach(sponsor => {
-      const div = document.createElement('div');
+    var sponsorList = document.getElementById('sponsorList');
+
+
+    for (var i = 0; i < sponsors.length; i++) {
+      var sponsor = sponsors[i];
+      var div = document.createElement('div');
       div.className = 'sponsor-item';
-      div.innerHTML = `
-        <img class="sponsor-img" src="${sponsor.img}" alt="${sponsor.name}">
-        <div class="sponsor-name">${sponsor.name}</div>
-      `;
+      
+
+      div.innerHTML = 
+        '<img class="sponsor-img" src="' + sponsor.img + '" alt="' + sponsor.name + '">' +
+        '<div class="sponsor-name">' + sponsor.name + '</div>';
+      
       sponsorList.appendChild(div);
-    });
+    }
   </script>
 </body>
 </html>
